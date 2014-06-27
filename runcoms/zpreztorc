@@ -34,7 +34,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt' \
   'base16' \
-  'tmux'
+  'tmux' \
+  'ruby'
 
 #
 # Editor
@@ -94,7 +95,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 
 # Auto switch the Ruby version on directory change.
-# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 #
 # Screen
