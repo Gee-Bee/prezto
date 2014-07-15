@@ -36,7 +36,8 @@ zstyle ':prezto:load' pmodule \
   'base16' \
   'tmux' \
   'ruby' \
-  'git'
+  'git' \
+  'ssh'
 
 #
 # Editor
@@ -113,7 +114,7 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 #
 
 # Set the SSH identities to load into the agent.
-# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+zstyle ':prezto:module:ssh:load' identities 'as_g_bunia' 'gmail_greg_bunia'
 
 #
 # Syntax Highlighting
