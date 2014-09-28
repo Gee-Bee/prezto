@@ -22,3 +22,13 @@ fi
 
 # Keyboard settings
 setxkbmap -layout pl,us -option ctrl:swapcaps
+
+# Touchpad settings
+if grep -q 'ThinkPad' /sys/class/dmi/id/product_version; then
+  # finger tapping as clicks
+  synclient TapButton1=1 TapButton2=2 TapButton3=3
+  # natural scrolling
+  synclient VertScrollDelta=-111 HorizScrollDelta=-111 \
+            VertTwoFingerScroll=1 HorizTwoFingerScroll=1 \
+            VertEdgeScroll=0 HorizEdgeScroll=0
+fi
