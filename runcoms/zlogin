@@ -21,7 +21,7 @@ if (( $+commands[fortune] )); then
 fi
 
 # Keyboard settings
-setxkbmap -layout pl,us -option ctrl:swapcaps
+setxkbmap -layout pl,us -option ctrl:nocaps
 
 # Touchpad settings
 if grep -q 'ThinkPad' /sys/class/dmi/id/product_version; then
