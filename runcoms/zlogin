@@ -27,7 +27,7 @@ input_devices=$(xinput --list --name-only)
 setxkbmap -layout pl,us -option ctrl:nocaps
 
 # Touchpad settings
-if [[ $input_devices =~ "SynPS/2 Synaptics Touchpad" ]]; then
+if [[ $input_devices =~ "SynPS/2 Synaptics TouchPad" ]]; then
   # finger tapping as clicks
   synclient TapButton1=1 TapButton2=2 TapButton3=3
   # natural scrolling
