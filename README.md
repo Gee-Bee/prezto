@@ -8,8 +8,8 @@ and prompt themes.
 Installation
 ------------
 
-Prezto will work with any recent release of Zsh, but the minimum recommended
-version is 4.3.11.
+Prezto will work with any recent release of Zsh, but the minimum required
+version is 4.3.17.
 
   1. Launch Zsh:
 
@@ -107,7 +107,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [1]: http://www.zsh.org
-[2]: http://i.imgur.com/nBEEZ.png "sorin theme"
+[2]: http://i.imgur.com/AzjmpwM.png "sorin theme"
 [3]: http://git-scm.com
 [4]: https://github.com
 [5]: http://gitimmersion.com
