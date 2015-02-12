@@ -35,7 +35,12 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]] && ( \
     tmux \
       new-session -d -s "$tmux_session" \; \
       set-option -t "$tmux_session" destroy-unattached off &> /dev/null
-    tmux source-file ${0:a:h}/tmux.conf
+    if [[ -f "/etc/centos-release" ]]; then
+      tmux source-file ${0:a:h}/tmux.conf
+      tmux source-file ${0:a:h}/tmux_server.conf
+    else
+      tmux source-file ${0:a:h}/tmux.conf
+    fi
   fi
 
   # Attach to the 'prezto' session or to the last session used.
