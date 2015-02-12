@@ -34,7 +34,7 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]] && ( \
     tmux \
       new-session -d -s "$tmux_session" \; \
       set-option -t "$tmux_session" destroy-unattached off &> /dev/null
-    if is_server; then
+    if [[ -n "$SSH_TTY" ]]; then
       tmux source-file ${0:a:h}/tmux.conf
       tmux source-file ${0:a:h}/tmux_server.conf
     else

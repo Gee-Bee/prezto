@@ -22,7 +22,7 @@ if (( $+commands[fortune] )); then
   fi
 fi
 
-if ! is_server; then
+if [[ -z "$SSH_TTY" ]]; then
   ## Input settings
   input_devices=$(xinput --list --name-only)
 
