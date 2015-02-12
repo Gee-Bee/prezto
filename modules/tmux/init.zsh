@@ -1,4 +1,3 @@
-#
 # Defines tmux aliases and provides for auto launching it at start-up.
 #
 # Authors:
@@ -35,7 +34,7 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]] && ( \
     tmux \
       new-session -d -s "$tmux_session" \; \
       set-option -t "$tmux_session" destroy-unattached off &> /dev/null
-    if [[ -f "/etc/centos-release" ]]; then
+    if is_server; then
       tmux source-file ${0:a:h}/tmux.conf
       tmux source-file ${0:a:h}/tmux_server.conf
     else

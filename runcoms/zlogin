@@ -22,28 +22,30 @@ if (( $+commands[fortune] )); then
   fi
 fi
 
-## Input settings
-input_devices=$(xinput --list --name-only)
+if ! is_server; then
+  ## Input settings
+  input_devices=$(xinput --list --name-only)
 
-# Keyboard settings
-setxkbmap -layout pl,us -option ctrl:nocaps
+  # Keyboard settings
+  setxkbmap -layout pl,us -option ctrl:nocaps
 
-# Touchpad settings
-if [[ $input_devices =~ "SynPS/2 Synaptics TouchPad" ]]; then
-  # finger tapping as clicks
-  synclient TapButton1=1 TapButton2=2 TapButton3=3
-  # natural scrolling
-  synclient VertScrollDelta=-111 HorizScrollDelta=-111 \
-            VertTwoFingerScroll=1 HorizTwoFingerScroll=1 \
-            VertEdgeScroll=0 HorizEdgeScroll=0
-fi
+  # Touchpad settings
+  if [[ $input_devices =~ "SynPS/2 Synaptics TouchPad" ]]; then
+    # finger tapping as clicks
+    synclient TapButton1=1 TapButton2=2 TapButton3=3
+    # natural scrolling
+    synclient VertScrollDelta=-111 HorizScrollDelta=-111 \
+              VertTwoFingerScroll=1 HorizTwoFingerScroll=1 \
+              VertEdgeScroll=0 HorizEdgeScroll=0
+  fi
 
-# TrackPoint settings
-if [[ $input_devices =~ "TPPS/2 IBM TrackPoint" ]]; then
-  # vertical scrolling
-  xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-  xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-  xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
-  # horizontal scrolling
-  xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+  # TrackPoint settings
+  if [[ $input_devices =~ "TPPS/2 IBM TrackPoint" ]]; then
+    # vertical scrolling
+    xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+    xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+    xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+    # horizontal scrolling
+    xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+  fi
 fi
