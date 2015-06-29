@@ -35,6 +35,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'base16' \
   'tmux' \
+  'command-not-found' \
   'ruby' \
   'git' \
   'ssh'
