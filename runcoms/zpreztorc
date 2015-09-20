@@ -31,14 +31,17 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
+  'ssh' \
   'completion' \
-  'prompt' \
   'base16' \
   'tmux' \
   'command-not-found' \
   'ruby' \
   'git' \
-  'ssh'
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt'
+
 
 #
 # Editor
@@ -94,7 +97,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 if [[ -n "$SSH_TTY" ]]; then
   zstyle ':prezto:module:prompt' theme 'fade' 'red'
 else
-  zstyle ':prezto:module:prompt' theme 'pure'
+  zstyle ':prezto:module:prompt' theme 'paradox'
 fi
 
 #
