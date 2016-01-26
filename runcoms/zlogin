@@ -48,4 +48,7 @@ if [[ -z "$SSH_TTY" ]]; then
   #   # horizontal scrolling
   #   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
   # fi
+
+  # User anacron
+  [ -f ${HOME}/.anacron/etc/anacrontab ] || /usr/sbin/anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 fi
