@@ -27,7 +27,7 @@ if [[ -z "$SSH_TTY" ]]; then
   # input_devices=$(xinput --list --name-only)
 
   # Keyboard settings
-  setxkbmap -layout pl,us -option ctrl:nocaps
+  # setxkbmap -layout pl,us -option ctrl:nocaps
 
   # # Touchpad settings
   # if [[ $input_devices =~ "SynPS/2 Synaptics TouchPad" ]]; then
