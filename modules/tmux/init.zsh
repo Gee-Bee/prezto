@@ -39,6 +39,7 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]] && ( \
       tmux source-file ${0:a:h}/tmux_server.conf
     else
       tmux source-file ${0:a:h}/tmux.conf
+      tmux source-file ${0:a:h}/statusbar.conf
     fi
   fi
 
