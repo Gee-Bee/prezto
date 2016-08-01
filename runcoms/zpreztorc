@@ -44,6 +44,13 @@ zstyle ':prezto:load' pmodule \
 
 
 #
+# Autosuggestions
+#
+
+# Set the query found color.
+# zstyle ':prezto:module:autosuggestions:color' found ''
+
+#
 # Editor
 #
 
@@ -134,6 +141,7 @@ zstyle ':prezto:module:ssh:load' identities 'gmail_greg_bunia_rsa' 'as_g_bunia_r
 #   'main' \
 #   'brackets' \
 #   'pattern' \
+#   'line' \
 #   'cursor' \
 #   'root'
 #
