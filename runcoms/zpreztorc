@@ -33,6 +33,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'ssh' \
   'completion' \
+  'prompt' \
   'base16' \
   'tmux' \
   'command-not-found' \
@@ -40,7 +41,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'syntax-highlighting' \
   'history-substring-search' \
-  'prompt'
+  'autosuggestions'
 
 
 #
