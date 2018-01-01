@@ -7,10 +7,6 @@
 
 export TERM="xterm-256color"
 
-if command -v most > /dev/null 2>&1; then
-  export PAGER="most"
-fi
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -27,4 +23,3 @@ expand-or-complete-with-dots() {      # This bunch of code displays red dots whe
 }
 zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
-

@@ -19,8 +19,9 @@ fi
 
 export EDITOR='vim'
 export VISUAL='vim'
-export PAGER='less'
-export ATOM_PATH='/opt/Atom/atom'
+if command -v most > /dev/null 2>&1; then
+  export PAGER="most"; else export PAGER="less"; echo "\nInstall most(1)"
+fi
 
 #
 # Language
