@@ -34,6 +34,3 @@
 [submodule "modules/base16/base16-shell"]
 	path = modules/base16/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
-[submodule "modules/tmux/plugins/tpm"]
-	path = modules/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
