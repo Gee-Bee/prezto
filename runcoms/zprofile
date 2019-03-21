@@ -69,8 +69,17 @@ fi
 # Android
 #
 
-if [[ -z "$ANDROID_HOME" ]]; then
-  export ANDROID_HOME=${HOME}/Android/Sdk
+if [[ -z "$ANDROID_SDK_ROOT" ]] && [[ -e "${HOME}/Android/Sdk" ]]; then
+  export ANDROID_SDK_ROOT=${HOME}/Android/Sdk
+  path=(
+    # avdmanager, sdkmanager
+    $ANDROID_SDK_ROOT/tools/bin
+    # adb, logcat
+    $ANDROID_SDK_ROOT/platform-tools
+    emulator
+    $ANDROID_SDK_ROOT/emulator
+    $path
+  )
 fi
 
 #
