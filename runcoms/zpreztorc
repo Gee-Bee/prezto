@@ -40,7 +40,6 @@ zstyle ':prezto:load' pmodule \
   'ssh' \
   'completion' \
   'prompt' \
-  'base16' \
   'tmux' \
   'command-not-found' \
   'ruby' \
