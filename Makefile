@@ -1,13 +1,14 @@
 runcoms := zlogin zlogout zpreztorc zprofile zshenv zshrc
 
-install: $(runcoms:%=ln_%)
-	@echo "Links created"
+.PHONY: install
+install: $(runcoms:%=~/.%)
 
-ln_%:
-	@[ -e ~/.$* ] || ln -s $(realpath runcoms/$*) ~/.$*
+~/.%: runcoms/%
+	@[ -e $@ ] || (ln -s $(realpath $^) $@ && echo "Link created $@")
 
+.PHONY: clean
 clean: $(runcoms:%=unlink_%)
-	@echo "Links removed"
 
+.PHONY: unlink_%
 unlink_%:
-	@[ ! -h ~/.$* ] || rm -f ~/.$*
+	@[ ! -h ~/.$* ] || ( rm -f ~/.$* && echo "Removed link ~/.$*" )
